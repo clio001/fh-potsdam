@@ -13,7 +13,7 @@ getData()
 let map = L.map("map", {
     zoomControl: true,
     zoom: 3,
-    scrollWheelZoom: false,
+    scrollWheelZoom: true,
 }).setView([52.516389, 13.397778]);
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -42,6 +42,9 @@ const setMarkers = (participants) => {
         ${element["Wikidata-URL"] ? `<hr/><a class="btn " href="${element["Wikidata-URL"]}" target="_blank">Wikidata</a>` : ''}
      
         </div>
+        
+        <iframe src="https://mirador.staatsbibliothek-berlin.de/?manifest=https://content.staatsbibliothek-berlin.de/dc/771823622/manifest"
+                style="width: 20rem; height: 650px; margin-bottom: 1rem;"></iframe>
         
       </div>
     </div>`
